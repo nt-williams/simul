@@ -4,9 +4,15 @@
 \name{simul-package}
 \alias{simul}
 \alias{simul-package}
-\title{simul: What the Package Does (Title Case)}
+\title{simul: Simultaneous Confidence Bands Based on the Efficient Influence Function and Multiplier Bootstrap}
 \description{
-More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Compute critical values for constructing uniform (simultaneous) confidence bands and hypothesis tests.
+  The critical value is calculated using a multiplier bootstrap of the empirical efficient influence function 
+  as described by Kennedy (2019) <doi:10.1080/01621459.2017.1422737>. The multiplier bootstrap does not require 
+  resampling of the data but only simulation of the multipliers and is thus computationally efficient.
+}
+\author{
+\strong{Maintainer}: Nicholas Williams \email{niw4001@med.cornell.edu} (\href{https://orcid.org/0000-0002-1378-4831}{ORCID}) [copyright holder]
+
 }
 \keyword{internal}
