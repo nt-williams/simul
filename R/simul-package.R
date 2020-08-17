@@ -6,5 +6,6 @@
 ## usethis namespace: start
 #' @useDynLib simul, .registration = TRUE
 #' @importFrom Rcpp sourceCpp
+#' @importFrom stats quantile
 ## usethis namespace: end
 NULL
