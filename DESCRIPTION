@@ -1,6 +1,6 @@
 Package: simul
 Type: Package
-Title: Simultaneous Confidence Bands Based on the Efficient Influence Function and Multiplier Bootstrap
+Title: Fast Simultaneous Confidence Bands Based on the Efficient Influence Function and Multiplier Bootstrap
 Version: 0.1.0.9000
 Authors@R: person(given = "Nicholas",
              family = "Williams",
@@ -21,3 +21,4 @@ Imports:
     Rcpp
 Suggests: 
     testthat
+URL: https://github.com/nt-williams/simul#readme

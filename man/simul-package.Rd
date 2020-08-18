@@ -4,12 +4,19 @@
 \name{simul-package}
 \alias{simul}
 \alias{simul-package}
-\title{simul: Simultaneous Confidence Bands Based on the Efficient Influence Function and Multiplier Bootstrap}
+\title{simul: Fast Simultaneous Confidence Bands Based on the Efficient Influence Function and Multiplier Bootstrap}
 \description{
 Compute critical values for constructing uniform (simultaneous) confidence bands and hypothesis tests.
   The critical value is calculated using a multiplier bootstrap of the empirical efficient influence function 
   as described by Kennedy (2019) <doi:10.1080/01621459.2017.1422737>. The multiplier bootstrap does not require 
   resampling of the data but only simulation of the multipliers and is thus computationally efficient.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/nt-williams/simul#readme}
+}
+
 }
 \author{
 \strong{Maintainer}: Nicholas Williams \email{niw4001@med.cornell.edu} (\href{https://orcid.org/0000-0002-1378-4831}{ORCID}) [copyright holder]

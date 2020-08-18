@@ -5,9 +5,9 @@
 
 using namespace Rcpp;
 
-// UnifMultBoot
-NumericVector UnifMultBoot(List x, List eif, const int n, const int reps);
-RcppExport SEXP _simul_UnifMultBoot(SEXP xSEXP, SEXP eifSEXP, SEXP nSEXP, SEXP repsSEXP) {
+// multBoot
+NumericVector multBoot(List x, List eif, const int n, const int reps);
+RcppExport SEXP _simul_multBoot(SEXP xSEXP, SEXP eifSEXP, SEXP nSEXP, SEXP repsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -15,13 +15,13 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< List >::type eif(eifSEXP);
     Rcpp::traits::input_parameter< const int >::type n(nSEXP);
     Rcpp::traits::input_parameter< const int >::type reps(repsSEXP);
-    rcpp_result_gen = Rcpp::wrap(UnifMultBoot(x, eif, n, reps));
+    rcpp_result_gen = Rcpp::wrap(multBoot(x, eif, n, reps));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_simul_UnifMultBoot", (DL_FUNC) &_simul_UnifMultBoot, 4},
+    {"_simul_multBoot", (DL_FUNC) &_simul_multBoot, 4},
     {NULL, NULL, 0}
 };
 

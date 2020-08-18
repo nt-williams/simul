@@ -14,7 +14,7 @@ List eifSigma(List eif){
   return out;
 }
 
-List multBoot(const int n, const int reps){
+List Rademacher(const int n, const int reps){
   List out(reps);
 
   for (int i = 0; i < reps; i++){
@@ -41,12 +41,12 @@ List centerEstim(List x, List eif){
 }
 
 // [[Rcpp::export]]
-NumericVector UnifMultBoot(List x,
+NumericVector multBoot(List x,
                            List eif,
                            const int n,
                            const int reps){
 
-  List mbs = multBoot(n, reps);
+  List mbs = Rademacher(n, reps);
   List val = centerEstim(x, eif);
   const double denom = sqrt(n);
   NumericVector res(reps);

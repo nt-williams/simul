@@ -2,7 +2,7 @@
 % Please edit documentation in R/simul.R
 \name{simul_crit}
 \alias{simul_crit}
-\title{Find Simultaneous Band Critical Value}
+\title{Find Simultaneous Confidence Band Critical Value}
 \usage{
 simul_crit(x, eif, nobs, reps = 1e+05, level = 0.95)
 }
@@ -21,7 +21,7 @@ simul_crit(x, eif, nobs, reps = 1e+05, level = 0.95)
 The estimated critical value satisfying the requirements for a uniform confidence band around all estimates.
 }
 \description{
-Find Simultaneous Band Critical Value
+Find Simultaneous Confidence Band Critical Value
 }
 \examples{
 # TODO
