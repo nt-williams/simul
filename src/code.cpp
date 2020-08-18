@@ -42,18 +42,18 @@ List centerEstim(List x, List eif){
 
 // [[Rcpp::export]]
 NumericVector multBoot(List x,
-                           List eif,
-                           const int n,
-                           const int reps){
+                       List eif,
+                       const int n,
+                       const int reps){
 
   List mbs = Rademacher(n, reps);
   List val = centerEstim(x, eif);
   const double denom = sqrt(n);
+  NumericVector clct(x.size());
   NumericVector res(reps);
 
   for (int i = 0; i < reps; i++){
     NumericVector m = mbs[i];
-    NumericVector clct(x.size());
 
     for (int j = 0; j < x.size(); j++){
       NumericVector v = val[j];
