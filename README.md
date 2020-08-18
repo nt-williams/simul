@@ -12,6 +12,8 @@ has not yet been a stable, usable release suitable for the
 public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
 [![Travis build
 status](https://travis-ci.com/nt-williams/simul.svg?branch=master)](https://travis-ci.com/nt-williams/simul)
+[![License: GPL
+v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 <!-- badges: end -->
 
 > Fast Simultaneous Confidence Bands Based on the Efficient Influence
@@ -40,3 +42,7 @@ Edward H. Kennedy (2019) Nonparametric Causal Effects Based on
 Incremental Propensity Score Interventions, Journal of the American
 Statistical Association, 114:526, 645-656, DOI:
 10.1080/01621459.2017.1422737
+
+## License
+
+GPLv3 @ Nicholas Williams
