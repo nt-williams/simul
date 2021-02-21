@@ -1,4 +1,3 @@
-
 #' Find Simultaneous Confidence Band Critical Value
 #'
 #' @param x A list of parameter estimates.
@@ -11,8 +10,11 @@
 #' @export
 #'
 #' @examples
-#' # TODO
-simul_crit <- function(x, eif, nobs, reps = 1e5, level = 0.95) {
+#' data(eif)
+#' psi <- lapply(eif, function(x) mean(x))
+#' n <- length(eif[[1]])
+#' simul(psi, eif, n)
+simul <- function(x, eif, nobs, reps = 1e5, level = 0.95) {
   multboot_checks(x, eif, nobs, level)
   mbs <- multBoot(x, eif, nobs, reps)
   return(quantile(mbs, level, names = FALSE))

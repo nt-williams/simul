@@ -2,11 +2,11 @@
 % Please edit documentation in R/simul-package.R
 \docType{package}
 \name{simul-package}
-\alias{simul}
 \alias{simul-package}
+\alias{_PACKAGE}
 \title{simul: Fast Simultaneous Confidence Bands Based on the Efficient Influence Function and Multiplier Bootstrap}
 \description{
-Compute critical values for constructing uniform (simultaneous) confidence bands and hypothesis tests.
+Compute critical values for constructing uniform (simultaneous) confidence bands.
   The critical value is calculated using a multiplier bootstrap of the empirical efficient influence function 
   as described by Kennedy (2019) <doi:10.1080/01621459.2017.1422737>. The multiplier bootstrap does not require 
   resampling of the data but only simulation of the multipliers and is thus computationally efficient.

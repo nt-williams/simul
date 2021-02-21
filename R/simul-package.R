@@ -1,3 +1,5 @@
+#' @docType package
+#' @aliases simul-package
 #' @keywords internal
 "_PACKAGE"
 

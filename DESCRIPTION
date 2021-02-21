@@ -1,20 +1,20 @@
 Package: simul
 Type: Package
 Title: Fast Simultaneous Confidence Bands Based on the Efficient Influence Function and Multiplier Bootstrap
-Version: 0.1.0.9000
+Version: 0.1.0
 Authors@R: person(given = "Nicholas",
              family = "Williams",
              role = c("aut", "cre", "cph"),
              email = "niw4001@med.cornell.edu", 
              comment = c(ORCID = "0000-0002-1378-4831"))
-Description: Compute critical values for constructing uniform (simultaneous) confidence bands and hypothesis tests.
+Description: Compute critical values for constructing uniform (simultaneous) confidence bands.
   The critical value is calculated using a multiplier bootstrap of the empirical efficient influence function 
   as described by Kennedy (2019) <doi:10.1080/01621459.2017.1422737>. The multiplier bootstrap does not require 
   resampling of the data but only simulation of the multipliers and is thus computationally efficient. 
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 LinkingTo: 
     Rcpp
 Imports: 
@@ -22,3 +22,5 @@ Imports:
 Suggests: 
     testthat
 URL: https://github.com/nt-williams/simul#readme
+Depends: 
+    R (>= 2.10)

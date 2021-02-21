@@ -10,10 +10,10 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 [![Project Status: WIP – Initial development is in progress, but there
 has not yet been a stable, usable release suitable for the
 public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
-[![Travis build
-status](https://travis-ci.com/nt-williams/simul.svg?branch=master)](https://travis-ci.com/nt-williams/simul)
 [![License: GPL
 v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![R build
+status](https://github.com/nt-williams/simul/workflows/R-CMD-check/badge.svg)](https://github.com/nt-williams/simul/actions)
 <!-- badges: end -->
 
 > Fast Simultaneous Confidence Bands Based on the Efficient Influence
@@ -32,9 +32,9 @@ devtools::install_github("nt-williams/simul")
 ## Scope
 
 Compute fast critical values for constructing uniform (simultaneous)
-confidence bands and hypothesis tests. The critical value is calculated
-using a multiplier bootstrap of the empirical efficient influence
-function as described by Kennedy (2019).
+confidence bands. The critical value is calculated using a multiplier
+bootstrap of the empirical efficient influence function as described by
+Kennedy (2019).
 
 ## References
 
