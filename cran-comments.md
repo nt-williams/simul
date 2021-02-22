@@ -1,3 +1,7 @@
+## Version 0.1.1 
+
+* Removed problematic link in README
+
 ## Test environments
 
 * local R installation (Mac OS), R 4.0.3
