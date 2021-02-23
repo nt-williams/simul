@@ -6,14 +6,14 @@
 using namespace Rcpp;
 
 // multBoot
-NumericVector multBoot(List x, List eif, const int n, const int reps);
+NumericVector multBoot(List x, List eif, const double n, const int reps);
 RcppExport SEXP _simul_multBoot(SEXP xSEXP, SEXP eifSEXP, SEXP nSEXP, SEXP repsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< List >::type x(xSEXP);
     Rcpp::traits::input_parameter< List >::type eif(eifSEXP);
-    Rcpp::traits::input_parameter< const int >::type n(nSEXP);
+    Rcpp::traits::input_parameter< const double >::type n(nSEXP);
     Rcpp::traits::input_parameter< const int >::type reps(repsSEXP);
     rcpp_result_gen = Rcpp::wrap(multBoot(x, eif, n, reps));
     return rcpp_result_gen;
