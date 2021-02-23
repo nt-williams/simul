@@ -1,7 +1,7 @@
 Package: simul
 Type: Package
 Title: Fast Simultaneous Confidence Bands Based on the Efficient Influence Function and Multiplier Bootstrap
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: person(given = "Nicholas",
              family = "Williams",
              role = c("aut", "cre", "cph"),

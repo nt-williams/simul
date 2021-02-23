@@ -18,7 +18,13 @@ status](https://github.com/nt-williams/simul/workflows/R-CMD-check/badge.svg)](h
 
 ## Installation
 
-You can install simul from [GitHub](https://github.com) with:
+simul can be installed from CRAN with:
+
+``` r
+install.packages("simul")
+```
+
+or from [GitHub](https://github.com) with:
 
 ``` r
 devtools::install_github("nt-williams/simul")

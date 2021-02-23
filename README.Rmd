@@ -26,7 +26,13 @@ knitr::opts_chunk$set(
 
 ## Installation
 
-You can install simul from [GitHub](https://github.com) with:
+simul can be installed from CRAN with:
+
+``` r
+install.packages("simul")
+```
+
+or from [GitHub](https://github.com) with:
 
 ``` r
 devtools::install_github("nt-williams/simul")
