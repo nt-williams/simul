@@ -1,5 +1,10 @@
 ## Version 0.1.2
 
+This is a submission of a previously archived package. 
+simul was archived on CRAN after failing to be installed on a Solaris machine. 
+A Solaris test environment has been setup for the package and is passing checks.
+
+
 ## Test environments
 
 * local R installation (Mac OS), R 4.0.3
