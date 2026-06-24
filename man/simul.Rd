@@ -2,16 +2,20 @@
 % Please edit documentation in R/simul.R
 \name{simul}
 \alias{simul}
+\alias{simul.list}
 \title{Find Simultaneous Confidence Band Critical Value}
 \usage{
-simul(x, eif, nobs, reps = 1e+05, level = 0.95)
+simul(x, ...)
+
+\method{simul}{list}(x, eif = NULL, reps = 1e+05, level = 0.95, ...)
 }
 \arguments{
-\item{x}{A list of parameter estimates.}
+\item{x}{A list of parameter estimates, or a list of \code{ife::influence_func_estimate} objects.}
 
-\item{eif}{A list of empirical efficient influence functions corresponding to the estimates in \code{x}.}
+\item{...}{Not used.}
 
-\item{nobs}{The number of observations.}
+\item{eif}{A list of empirical efficient influence functions corresponding to the estimates in \code{x}.
+Not required when \code{x} is a list of \code{ife::influence_func_estimate} objects.}
 
 \item{reps}{The number of repetitions to use for the multiplier bootstrap, the default is 1e5.}
 
@@ -24,8 +28,8 @@ The estimated critical value satisfying the requirements for a uniform confidenc
 Find Simultaneous Confidence Band Critical Value
 }
 \examples{
-data(eif)
-psi <- lapply(eif, function(x) mean(x))
-n <- length(eif[[1]])
-simul(psi, eif, n)
+data(eifs)
+psi <- lapply(eifs, function(x) x[[1]])
+eif <- lapply(eifs, function(x) x[[2]])
+simul(psi, eif, reps = 1000)
 }

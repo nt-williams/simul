@@ -5,23 +5,27 @@
 
 using namespace Rcpp;
 
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
 // multBoot
-NumericVector multBoot(List x, List eif, const double n, const int reps);
-RcppExport SEXP _simul_multBoot(SEXP xSEXP, SEXP eifSEXP, SEXP nSEXP, SEXP repsSEXP) {
+NumericVector multBoot(List eif, const int n, const int reps);
+RcppExport SEXP _simul_multBoot(SEXP eifSEXP, SEXP nSEXP, SEXP repsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< List >::type x(xSEXP);
     Rcpp::traits::input_parameter< List >::type eif(eifSEXP);
-    Rcpp::traits::input_parameter< const double >::type n(nSEXP);
+    Rcpp::traits::input_parameter< const int >::type n(nSEXP);
     Rcpp::traits::input_parameter< const int >::type reps(repsSEXP);
-    rcpp_result_gen = Rcpp::wrap(multBoot(x, eif, n, reps));
+    rcpp_result_gen = Rcpp::wrap(multBoot(eif, n, reps));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_simul_multBoot", (DL_FUNC) &_simul_multBoot, 4},
+    {"_simul_multBoot", (DL_FUNC) &_simul_multBoot, 3},
     {NULL, NULL, 0}
 };
 

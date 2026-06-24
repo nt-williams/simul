@@ -1,5 +1,5 @@
 #' Simulated Efficient Influence Functions
 #'
-#' A list of 5 simulated influence functions.
+#' A list of 4 simulated influence functions.
 #'
-"eif"
+"eifs"

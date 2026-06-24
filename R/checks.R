@@ -11,10 +11,20 @@ check_length <- function(x, y) {
   }
 }
 
-check_nobs <- function(nobs, eif) {
-  nobs_eif <- lapply(eif, function(x) length(x))
-  if (!all(nobs_eif == nobs)) {
-    stop("Mismatch between specified number of observations and length of efficient influence function(s).",
+check_nobs <- function(eif) {
+  lengths <- vapply(eif, length, integer(1L))
+  if (length(unique(lengths)) > 1L) {
+    stop("All influence functions must have the same number of observations.", call. = FALSE)
+  }
+  if (lengths[1L] < 2L) {
+    stop("Number of observations must be greater than 1.", call. = FALSE)
+  }
+}
+
+check_eif_variance <- function(eif) {
+  zero_var <- vapply(eif, function(x) var(x) == 0, logical(1))
+  if (any(zero_var)) {
+    stop("Variance of an influence function is zero; each influence function must have more than 1 observation.",
          call. = FALSE)
   }
 }
@@ -25,10 +35,11 @@ check_level <- function(level) {
   }
 }
 
-multboot_checks <- function(x, eif, nobs, level) {
+multboot_checks <- function(x, eif, level) {
   check_list(x)
   check_list(eif)
-  check_nobs(nobs, eif)
   check_length(x, eif)
+  check_nobs(eif)
+  check_eif_variance(eif)
   check_level(level)
 }
